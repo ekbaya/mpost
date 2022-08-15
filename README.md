@@ -31,8 +31,8 @@ DeliveryRequest deliveryRequest = await mpost.createDeliveryRequest(newDeliveryR
 
 ```
 ## Available methods
-- `getDeliveryRequests(queryObject)`
-- `getDeliveryRequestById(queryObject)`
+- `getDeliveryRequests()`
+- `getDeliveryRequestById(int)`
 - `createDeliveryRequest(queryObject)`
 - `calculateDistance(queryObject)`
 
