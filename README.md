@@ -27,9 +27,39 @@ DistanceRequest distanceRequest = DistanceRequest(
 Distance distance = await mpost.calculateDistance(distanceRequest);
 
 //createDeliveryRequest
+Address deliveryAddress = Address(
+        latitude: 40.659569,
+        longitude: -73.933783,
+        address: "Globe Round About",
+        detailed_address:
+            "Sunrays House, Near Globe Cinema Roundabout, Nairobi City");
+
+Address pickupAddress = Address(
+        latitude: 37.785834,
+        longitude: -122.406417,
+        address: "Globe Round About",
+        detailed_address:
+            "Sunrays House, Near Globe Cinema Roundabout, Nairobi City");
+
+NewDeliveryRequest newDeliveryRequest = NewDeliveryRequest(
+      delivery_address: deliveryAddress,
+      item_type: 'Food',
+      pickup_time: '2022-02-02 11:11:00',
+      pickup_address: pickupAddress,
+      recipient_mobile: '0712695820',
+      recipient_name: 'Elias Baya',
+    );
+
 DeliveryRequest deliveryRequest = await mpost.createDeliveryRequest(newDeliveryRequest);
 
+
+//Get All Delivery Requests
+List<DeliveryRequest> deliveryRequests = await mpost.getDeliveryRequests();
+
+//Get A Single Delivery Request
+DeliveryRequest deliveryRequest = await await mpost.getDeliveryRequest(130);
 ```
+
 ## Available methods
 - `getDeliveryRequests()`
 - `getDeliveryRequestById(int)`
