@@ -7,15 +7,15 @@
 import 'dart:convert';
 
 class PaymentRequest {
-  final int id;
-  final int user_id;
-  final int status_id;
-  final int client_id;
-  final int payment_method_id;
+  final String id;
+  final String user_id;
+  final String status_id;
+  final String client_id;
+  final String payment_method_id;
   final String account;
-  final int amount;
-  final int total_paid;
-  final int balance;
+  final String amount;
+  final String total_paid;
+  final String balance;
   final String mobile;
   final String email;
   final String reference;
@@ -65,15 +65,15 @@ class PaymentRequest {
   });
 
   PaymentRequest copyWith({
-    int? id,
-    int? user_id,
-    int? status_id,
-    int? client_id,
-    int? payment_method_id,
+    String? id,
+    String? user_id,
+    String? status_id,
+    String? client_id,
+    String? payment_method_id,
     String? account,
-    int? amount,
-    int? total_paid,
-    int? balance,
+    String? amount,
+    String? total_paid,
+    String? balance,
     String? mobile,
     String? email,
     String? reference,
@@ -158,33 +158,33 @@ class PaymentRequest {
 
   factory PaymentRequest.fromMap(Map<dynamic, dynamic> map) {
     return PaymentRequest(
-      id: map['id'] as int,
-      user_id: map['user_id'] as int,
-      status_id: map['status_id'] as int,
-      client_id: map['client_id'] as int,
-      payment_method_id: map['payment_method_id'] as int,
-      account: map['account'] as String,
-      amount: map['amount'] as int,
-      total_paid: map['total_paid'] as int,
-      balance: map['balance'] as int,
-      mobile: map['mobile'] as String,
-      email: map['email'] as String,
-      reference: map['reference'] as String,
-      TransID: map['TransID'] as String,
-      MerchantRequestID: map['MerchantRequestID'] as String,
-      FirstName: map['FirstName'] as String,
-      MiddleName: map['MiddleName'] as String,
-      LastName: map['LastName'] as String,
-      TransTime: map['TransTime'] as String,
-      CheckoutRequestID: map['CheckoutRequestID'] as String,
-      description: map['description'] as String,
-      processor_response: map['processor_response'] as String,
-      created_at: map['created_at'] as String,
-      updated_at: map['updated_at'] as String,
-      deleted_at: map['deleted_at'] as String,
-      redirectUrl: map['redirectUrl'] as String,
-      TransRef: map['TransRef'] as String,
-      TransToken: map['TransToken'] as String,
+      id: map['id'] .toString(),
+      user_id: map['user_id'] .toString(),
+      status_id: map['status_id'] .toString(),
+      client_id: map['client_id'] .toString(),
+      payment_method_id: map['payment_method_id'] .toString(),
+      account: map['account'] .toString(),
+      amount: map['amount'] .toString(),
+      total_paid: map['total_paid'] .toString(),
+      balance: map['balance'] .toString(),
+      mobile: map['mobile'] .toString(),
+      email: map['email'] .toString(),
+      reference: map['reference'] .toString(),
+      TransID: map['TransID'] .toString(),
+      MerchantRequestID: map['MerchantRequestID'] .toString(),
+      FirstName: map['FirstName'] .toString(),
+      MiddleName: map['MiddleName'] .toString(),
+      LastName: map['LastName'] .toString(),
+      TransTime: map['TransTime'] .toString(),
+      CheckoutRequestID: map['CheckoutRequestID'] .toString(),
+      description: map['description'] .toString(),
+      processor_response: map['processor_response'] .toString(),
+      created_at: map['created_at'] .toString(),
+      updated_at: map['updated_at'] .toString(),
+      deleted_at: map['deleted_at'] .toString(),
+      redirectUrl: map['redirectUrl'] .toString(),
+      TransRef: map['TransRef'] .toString(),
+      TransToken: map['TransToken'] .toString(),
     );
   }
 

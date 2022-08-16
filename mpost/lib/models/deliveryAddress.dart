@@ -82,13 +82,13 @@ class DeliveryAddress {
       user_id: map['user_id'] as int,
       latitude: map['latitude'] as double,
       longitude: map['longitude'] as double,
-      address: map['address'] as String,
-      detailed_address: map['detailed_address'] as String,
-      recipient_name: map['recipient_name'] as String,
-      recipient_mobile: map['recipient_mobile'] as String,
-      created_at: map['created_at'] as String,
-      updated_at: map['updated_at'] as String,
-      deleted_at: map['deleted_at'] as String,
+      address: map['address'] .toString(),
+      detailed_address: map['detailed_address'] .toString(),
+      recipient_name: map['recipient_name'] .toString(),
+      recipient_mobile: map['recipient_mobile'] .toString(),
+      created_at: map['created_at'] .toString(),
+      updated_at: map['updated_at'] .toString(),
+      deleted_at: map['deleted_at'] .toString(),
     );
   }
 

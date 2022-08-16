@@ -58,12 +58,12 @@ class Status {
   factory Status.fromMap(Map<dynamic, dynamic> map) {
     return Status(
       id: map['id'] as int,
-      name: map['name'] as String,
-      color_code: map['color_code'] as String,
-      description: map['description'] as String,
-      created_at: map['created_at'] as String,
-      updated_at: map['updated_at'] as String,
-      deleted_at: map['deleted_at'] as String,
+      name: map['name'] .toString(),
+      color_code: map['color_code'] .toString(),
+      description: map['description'] .toString(),
+      created_at: map['created_at'] .toString(),
+      updated_at: map['updated_at'] .toString(),
+      deleted_at: map['deleted_at'] .toString(),
     );
   }
 

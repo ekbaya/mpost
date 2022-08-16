@@ -7,7 +7,7 @@
 import 'dart:convert';
 
 class User {
-  final int id;
+  final String id;
   final String first_name;
   final String middle_name;
   final String last_name;
@@ -16,9 +16,9 @@ class User {
   final String national_id_number;
   final String passport_number;
   final bool is_superuser;
-  final int role_id;
-  final int referred_by;
-  final int referee_id;
+  final String role_id;
+  final String referred_by;
+  final String referee_id;
   final String referral_code;
   final String mobile_verified_at;
   final String email_verified_at;
@@ -26,12 +26,12 @@ class User {
   final String updated_at;
   final String corporate_name;
   final String corporate_reg_no;
-  final int user_type_id;
-  final int country_id;
+  final String user_type_id;
+  final String country_id;
   final String agent_type_ref;
-  final int parent_ref;
+  final String parent_ref;
   final String full_name;
-  final int referrals_count;
+  final String referrals_count;
   User({
     required this.id,
     required this.first_name,
@@ -63,7 +63,7 @@ class User {
   
 
   User copyWith({
-    int? id,
+    String? id,
     String? first_name,
     String? middle_name,
     String? last_name,
@@ -72,9 +72,9 @@ class User {
     String? national_id_number,
     String? passport_number,
     bool? is_superuser,
-    int? role_id,
-    int? referred_by,
-    int? referee_id,
+    String? role_id,
+    String? referred_by,
+    String? referee_id,
     String? referral_code,
     String? mobile_verified_at,
     String? email_verified_at,
@@ -82,12 +82,12 @@ class User {
     String? updated_at,
     String? corporate_name,
     String? corporate_reg_no,
-    int? user_type_id,
-    int? country_id,
+    String? user_type_id,
+    String? country_id,
     String? agent_type_ref,
-    int? parent_ref,
+    String? parent_ref,
     String? full_name,
-    int? referrals_count,
+    String? referrals_count,
   }) {
     return User(
       id: id ?? this.id,
@@ -150,31 +150,31 @@ class User {
 
   factory User.fromMap(Map<dynamic, dynamic> map) {
     return User(
-      id: map['id'] as int,
-      first_name: map['first_name'] as String,
-      middle_name: map['middle_name'] as String,
-      last_name: map['last_name'] as String,
-      mobile: map['mobile'] as String,
-      email: map['email'] as String,
-      national_id_number: map['national_id_number'] as String,
-      passport_number: map['passport_number'] as String,
+      id: map['id'] .toString(),
+      first_name: map['first_name'] .toString(),
+      middle_name: map['middle_name'] .toString(),
+      last_name: map['last_name'] .toString(),
+      mobile: map['mobile'] .toString(),
+      email: map['email'] .toString(),
+      national_id_number: map['national_id_number'] .toString(),
+      passport_number: map['passport_number'] .toString(),
       is_superuser: map['is_superuser'] as bool,
-      role_id: map['role_id'] as int,
-      referred_by: map['referred_by'] as int,
-      referee_id: map['referee_id'] as int,
-      referral_code: map['referral_code'] as String,
-      mobile_verified_at: map['mobile_verified_at'] as String,
-      email_verified_at: map['email_verified_at'] as String,
-      created_at: map['created_at'] as String,
-      updated_at: map['updated_at'] as String,
-      corporate_name: map['corporate_name'] as String,
-      corporate_reg_no: map['corporate_reg_no'] as String,
-      user_type_id: map['user_type_id'] as int,
-      country_id: map['country_id'] as int,
-      agent_type_ref: map['agent_type_ref'] as String,
-      parent_ref: map['parent_ref'] as int,
-      full_name: map['full_name'] as String,
-      referrals_count: map['referrals_count'] as int,
+      role_id: map['role_id'].toString(),
+      referred_by: map['referred_by'] .toString(),
+      referee_id: map['referee_id'] .toString(),
+      referral_code: map['referral_code'] .toString(),
+      mobile_verified_at: map['mobile_verified_at'] .toString(),
+      email_verified_at: map['email_verified_at'] .toString(),
+      created_at: map['created_at'] .toString(),
+      updated_at: map['updated_at'] .toString(),
+      corporate_name: map['corporate_name'] .toString(),
+      corporate_reg_no: map['corporate_reg_no'] .toString(),
+      user_type_id: map['user_type_id'] .toString(),
+      country_id: map['country_id'] .toString(),
+      agent_type_ref: map['agent_type_ref'] .toString(),
+      parent_ref: map['parent_ref'] .toString(),
+      full_name: map['full_name'] .toString(),
+      referrals_count: map['referrals_count'] .toString(),
     );
   }
 

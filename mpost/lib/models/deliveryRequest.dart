@@ -27,12 +27,12 @@ class DeliveryRequest {
   final String recipient_name;
   final String recipient_mobile;
   final String item_type;
-  final String note;
-  final String instructions;
+  final String? note;
+  final String? instructions;
   final String created_at;
   final String updated_at;
-  final String deleted_at;
-  final Status status;
+  final String? deleted_at;
+  final Status? status;
   final User user;
   final PickupAddress pickupAddress;
   final DeliveryAddress deliveryAddress;
@@ -139,7 +139,7 @@ class DeliveryRequest {
       'created_at': created_at,
       'updated_at': updated_at,
       'deleted_at': deleted_at,
-      'status': status.toMap(),
+      'status': status!.toMap(),
       'user': user.toMap(),
       'pickupAddress': pickupAddress.toMap(),
       'deliveryAddress': deliveryAddress.toMap(),
@@ -155,19 +155,19 @@ class DeliveryRequest {
       status_id: map['status_id'] as int,
       pickup_address_id: map['pickup_address_id'] as int,
       delivery_address_id: map['delivery_address_id'] as int,
-      pickup_time: map['pickup_time'] as String,
+      pickup_time: map['pickup_time'] .toString(),
       estimated_distance: map['estimated_distance'] as double,
       actual_distance: map['actual_distance'] as int,
-      estimated_duration: map['estimated_duration'] as String,
+      estimated_duration: map['estimated_duration'] .toString(),
       delivery_cost: map['delivery_cost'] as int,
-      recipient_name: map['recipient_name'] as String,
-      recipient_mobile: map['recipient_mobile'] as String,
-      item_type: map['item_type'] as String,
-      note: map['note'] as String,
-      instructions: map['instructions'] as String,
-      created_at: map['created_at'] as String,
-      updated_at: map['updated_at'] as String,
-      deleted_at: map['deleted_at'] as String,
+      recipient_name: map['recipient_name'] .toString(),
+      recipient_mobile: map['recipient_mobile'] .toString(),
+      item_type: map['item_type'] .toString(),
+      note: map['note'] .toString(),
+      instructions: map['instructions'] .toString(),
+      created_at: map['created_at'] .toString(),
+      updated_at: map['updated_at'] .toString(),
+      deleted_at: map['deleted_at'] .toString(),
       status: Status.fromMap(map['status'] as Map<dynamic, dynamic>),
       user: User.fromMap(map['user'] as Map<dynamic, dynamic>),
       pickupAddress:

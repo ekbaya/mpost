@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:mpost/constants/http.dart';
 import 'package:mpost/models/deliveryRequest.dart';
 import 'package:mpost/models/distance.dart';
@@ -34,7 +35,7 @@ class MpostController {
 
   Future<DeliveryRequest> getDeliveryRequest(int id) async {
     final result = await http.get(
-      Uri.parse("$getDeliveryRequestURL/$id"),
+      Uri.parse("$getDeliveryRequestURL/$id/?with[]=payment_request.payment_method&with[]=pickup_address&with[]=delivery_address&with[]=status&with[]=user"),
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json",
@@ -42,6 +43,9 @@ class MpostController {
       },
     );
     var convertDataToJson = jsonDecode(result.body);
+    if (kDebugMode) {
+      print("RES=========$convertDataToJson");
+    }
     return DeliveryRequest.fromMap(convertDataToJson);
   }
 
@@ -72,7 +76,9 @@ class MpostController {
       body: jsonEncode(deliveryRequest.toMap()),
     );
     var convertDataToJson = jsonDecode(result.body);
-
+    if (kDebugMode) {
+      print("RES=========$convertDataToJson");
+    }
     return DeliveryRequest.fromMap(convertDataToJson);
   }
 }
