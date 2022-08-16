@@ -1,7 +1,7 @@
 name: mpost
-description: A new Flutter package project.
-version: 0.0.1
-homepage: "null"
+description: The Official Mpost wrapper for the android and iOS SDKs.
+version: 0.0.2
+homepage: "https://mpost.co.ke/"
 
 environment:
   sdk: ">=2.17.6 <3.0.0"
