@@ -1,1 +1,0 @@
-const String mapKey = "AIzaSyBGORjYyKEgXaFYcxzx1482WLlsVGHo9x0";

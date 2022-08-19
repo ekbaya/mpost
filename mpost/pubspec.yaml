@@ -1,7 +1,10 @@
 name: mpost
-description: The Official Mpost wrapper for the android and iOS SDKs.
-version: 0.0.2
-homepage: "https://mpost.co.ke/"
+description: The Official Mpost wrapper for the android and iOS SDKs.This SDK aims to help the development of integrations with
+             Mpost that use Dart, providing an easy interface to communicate with
+             Mpost's REST API. It's multi-platform, and supports mobile, desktop, and the browser
+
+version: 0.0.3
+homepage: "https://github.com/ekbaya/mpost/"
 
 environment:
   sdk: ">=2.17.6 <3.0.0"

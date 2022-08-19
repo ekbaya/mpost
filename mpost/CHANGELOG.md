@@ -6,3 +6,7 @@
 
 * Creating the SDK Case Study
 
+## 0.0.3
+
+* Adding Example App
+

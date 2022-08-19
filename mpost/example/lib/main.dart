@@ -28,7 +28,7 @@ void main() {
   runApp(MyApp());
 }
 
-final mpost = Mpost("de6cad52-1605-446f-a167-14f845d8b5a0");
+final mpost = Mpost("YOUR-MPOST-API-KEY");
 
 class MyApp extends StatelessWidget {
   @override
